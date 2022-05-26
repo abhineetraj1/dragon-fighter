@@ -82,5 +82,14 @@ function kk() {
 		window.location= window.location.href;
 	}
 }
+
+setInterval(k,400);
+function k() {
+	document.getElementsByTagName('meter')[0].value = document.getElementsByTagName('meter')[0].value + 10
+}
+setTimeout(m, 4000);
+function m() {
+	window.location = "menu.html";
+}
 mm();
 window.onresize = mm();
