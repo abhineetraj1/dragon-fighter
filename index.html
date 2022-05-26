@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		body{
+			background: black;
+		}
+		img{
+			position: absolute;
+			top: 35vh;
+			height: 60vh;
+		}
+		p{
+			font-family: cursive;
+			color: green;
+			font-size: 10vh;
+			position: absolute;
+			top: 1vh;
+			font-weight: bolder;
+			width: 100%;
+			text-align: center;
+		}
+		meter{
+			width: 80%;
+			position: absolute;
+			left: 10%;
+			top: 90%;
+			height: 4vh;
+			border: solid;
+		}
+	</style>
+	<script type="text/javascript">
+		setInterval(k,400);
+		function k() {
+			document.getElementsByTagName('meter')[0].value = document.getElementsByTagName('meter')[0].value + 10
+		}
+		setTimeout(m, 4000);
+		function m() {
+			window.location = "menu.html";
+		}
+	</script>
+</head>
+<body>
+	<p>Dragon fighter</p>
+	<img src="down.png">
+	<meter max=100 value="10"></meter>
+</body>
+</html>

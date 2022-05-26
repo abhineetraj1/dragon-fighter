@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		body{
+			padding: 0vh;
+			margin: 0vh;
+		}
+		#soldier{
+			width: 30%;
+			float: left;
+			height: 100vh;
+		}
+		#dragon{
+			width: 60%;
+			float: right;
+			height: 10vh;
+			text-align: right;
+		}
+		#s-img{
+			position: absolute;
+			top: 49vh;
+			left: 4vh;
+			height: 30vh;
+		}
+		#d-img{
+			position: absolute;
+			left: 95vh;
+			top: 24vh;
+			height: 50vh;
+		}
+		#background{
+			height: 100vh;
+		}
+		#game-ground{
+			position: absolute;
+		}
+		#bg{
+			position: absolute;
+		}
+		#controls{
+			position: absolute;
+			top: 80vh;
+		}
+		.ply{
+			text-align: center;
+			margin: 1vh;
+			font-size: 5vh;
+			font-weight: bold;
+			background: greenyellow;
+			border: solid;
+			border-radius: 15px;
+		}
+		#DragonLife-t{
+			position: absolute;
+			left: 80%;
+			top: 4vh;
+		}
+		#DragonLife{
+			position: absolute;
+			left: 80%;
+			top: 2vh;
+		}
+		#YourLife-t{
+			position: absolute;
+			left: 4%;
+			top: 4vh;
+		}
+		#YourLife{
+			position: absolute;
+			left: 4%;
+			top: 2vh;
+		}
+		</style>
+</head>
+<body>
+
+<div id="bg">
+	<p id="YourLife-t">Your life</p>
+	<meter id="YourLife" max="100" value="100"></meter>
+	<p id="DragonLife-t">Dragon's life</p>
+	<meter id="DragonLife" max="100" value="100"></meter>
+	<img src="background.jpg" id="background">
+</div>
+
+
+<div id="game-ground">
+	<div id="soldier">
+		<img src="up.png" id="s-img">
+	</div>
+	
+	
+	<div id="dragon">
+		<img src="dragon.png" id="d-img">
+	</div>
+</div>
+
+<div id="controls">
+	<button class="ply" onclick="shoot()">Shoot</button>
+	<button class="ply" onclick="bend()">Bend</button>
+	<a href="menu.html"><button class="ply">menu</button></a>
+</div>
+
+
+<script type="text/javascript">
+	function fire() {
+		var f = document.createElement("img");
+		f.src = "fire.png";
+		f.style.transform = "rotate(-90deg)";
+		f.style.position = "absolute";
+		f.style.height="120vh";
+		f.style.left="2%";
+		f.style.top="-17vh";
+		document.body.appendChild(f);
+		if (document.getElementsByClassName("ply")[1].innerText == "Bend") {
+			your_life=your_life-35;
+			document.getElementById("YourLife").value=your_life;
+		}
+		if (your_life < 1) {
+			window.location ="lost.html";
+		}
+		setTimeout(function() {
+			document.body.removeChild(f);
+		},2000);
+	}
+	setInterval(fire, 3000);
+	your_life=100;
+	dragon_life = 100;
+	function bt() {
+		for (var i=0; i < document.getElementsByClassName("bullet").length; i++) {
+			document.getElementsByClassName("bullet")[i].style.left=parseInt(document.getElementsByClassName("bullet")[i].style.left)+2+"%";
+			//console.log(document.getElementsByClassName("bullet")[i].style);
+			if (parseInt(document.getElementsByClassName("bullet")[i].style.left) > 58) {
+				document.getElementsByClassName("bullet")[i].remove();
+				dragon_life = dragon_life - 4;
+				document.getElementById("DragonLife").value = dragon_life;
+			}
+		}
+		if (dragon_life < 1) {
+			window.location ="won.html";
+		}
+	}
+	setInterval(bt, 50);
+	function shoot() {
+		if (document.getElementsByClassName("ply")[1].innerText == "Bend") {
+			var a = document.createElement("img");
+			a.className="bullet";
+			a.src="bullet.png"
+			a.style="position: absolute;height: 2vh;left:13% ;top:58vh;"
+			document.body.appendChild(a);
+		} else {
+			var a = document.createElement("img");
+			a.className="bullet";
+			a.src="bullet.png"
+			a.style="position: absolute;height: 2vh;left:13% ;top:69vh;"
+			document.body.appendChild(a);
+		}
+	}
+	function bend() {
+		if (document.getElementsByClassName("ply")[1].innerText == "Bend") {
+			document.getElementById('s-img').src="down.png";
+			document.getElementById('s-img').style.height="19vh"
+			document.getElementById('s-img').style.top = "60vh"
+			document.getElementsByClassName("ply")[1].innerText = "up";
+		} else {
+			document.getElementById('s-img').src="up.png";
+			document.getElementById('s-img').style.height="30vh"
+			document.getElementsByClassName("ply")[1].innerText = "Bend";
+			document.getElementById('s-img').style.top = "49vh"
+		}
+	}
+</script>
+
+</body>
+</html>
