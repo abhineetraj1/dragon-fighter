@@ -43,6 +43,18 @@
 		<a href="game.html"><button>Play</button></a>
 	</center>
 </div>
-<script type="text/javascript" src="app.js"></script>
+<script type="text/javascript">
+function mm() {
+	if (window.innerHeight > window.innerWidth) {
+			var a = document.createElement("img");
+			a.style = "width:100%";
+			a.src="r.png";
+			document.body.innerHTML = "<center><h1>Rotate your device</h1></center>";
+			document.body.appendChild(a);
+			setInterval(kk,1000);
+		}
+	}
+mm()
+</script>
 </body>
 </html>
