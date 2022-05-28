@@ -74,7 +74,7 @@ function mm() {
 			setInterval(kk,1000);
 		} else {
 			setInterval(bt,50);
-			setInterval(fire,4000);
+			setInterval(fire,7000);
 		}
 	}
 function kk() {
