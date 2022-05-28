@@ -26,7 +26,7 @@ This is a mobile web game made in web frameworks.
  Download the game, and open "index.html" file in your web browser & enjoy the game.
 
 ## Demo
-link to demo - [site](https://github.com/abhineetraj1/dragon-fighter)
+link to demo - [site](https://abhineetraj1.github.io/dragon-fighter/)
 
 
 ## Languages used:-
