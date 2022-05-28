@@ -16,7 +16,7 @@ function fire() {
 	}
 	setTimeout(function() {
 		document.body.removeChild(f);
-	},3000);
+	},2000);
 }
 your_life=100;
 dragon_life = 100;
@@ -74,7 +74,7 @@ function mm() {
 			setInterval(kk,1000);
 		} else {
 			setInterval(bt,50);
-			setInterval(fire,10000);
+			setInterval(fire,4000);
 		}
 	}
 function kk() {
@@ -83,13 +83,6 @@ function kk() {
 	}
 }
 
-setInterval(k,400);
-function k() {
-	document.getElementsByTagName('meter')[0].value = document.getElementsByTagName('meter')[0].value + 10
-}
-setTimeout(m, 4000);
-function m() {
-	window.location = "menu.html";
-}
+
 mm();
 window.onresize = mm();
