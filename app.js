@@ -16,7 +16,7 @@ function fire() {
 	}
 	setTimeout(function() {
 		document.body.removeChild(f);
-	},2000);
+	},3000);
 }
 your_life=100;
 dragon_life = 100;
@@ -74,7 +74,7 @@ function mm() {
 			setInterval(kk,1000);
 		} else {
 			setInterval(bt,50);
-			setInterval(fire,4000);
+			setInterval(fire,10000);
 		}
 	}
 function kk() {
