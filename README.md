@@ -5,17 +5,6 @@
 
 This is a mobile web game made in web frameworks.
 
-
-
-## Installation
-
-### For Andriod
-1) Download the application - [download]("dragon.apk")
-2) Go to downloads (in your browser), click on install
-
-### For other devices
-1) Download this source code
-
 ## Execution
 
 ### For andriod
