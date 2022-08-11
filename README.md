@@ -8,8 +8,9 @@ This is a mobile web game made in web frameworks.
 ## Execution
 
 ### For andriod
-1) Follow the installation guide
-2) Open the "dragon fighter", which is installed in your phone and enjoy!!
+1) Download the andriod app from -> [link](https://abhineetraj1.github.io/dragon-fighter/dragon.apk)
+2) Install the downloaded apk.
+3) Open the "dragon fighter", which is installed in your phone and enjoy!!
 
 ### For other devices
  Download the game, and open "index.html" file in your web browser & enjoy the game.
