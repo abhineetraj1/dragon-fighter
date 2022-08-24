@@ -31,11 +31,17 @@ cordova platform add [platform]
 Where [platform] can be:
 
 ios
+
 android
+
 windows
+
 wp8
+
 blackberry10
+
 firefoxos
+
 amazon-fireos
 
 If you want to check which platforms are available in your system, run cordova platform ls.
@@ -54,8 +60,6 @@ cordova build [platform]
 2) Install the downloaded apk.
 3) Open the "dragon fighter", which is installed in your phone and enjoy!!
 
-### For other devices
- Download the game, and open "index.html" file in your web browser & enjoy the game.
 
 ## Demo
 link to demo - [site](https://abhineetraj1.github.io/dragon-fighter/)
